@@ -18,14 +18,14 @@ namespace projekt
         dodajautora dodajA;
         dodajwydawnictwo dodajW;
         dodajkategorie dodajKa;
-        Form10 edytujK;
-        Form11 edytujA;
-        Form12 edytujW;
-        Form13 edytujKa;
-        Form14 usunK;
-        Form15 usunA;
-        Form16 usunW;
-        Form17 usunKa;
+        edycjaksiazki edytujK;
+        edycjaautora edytujA;
+        edycjawydawnictwa edytujW;
+        edycjakategorii edytujKa;
+        usuwanieksiazki usunK;
+        usuwanieautora usunA;
+        usuwaniewydawnictwa usunW;
+        usuwaniekategorii usunKa;
         //panel administratora
         
         public paneladmina()
@@ -56,7 +56,7 @@ namespace projekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            edytujK = new Form10();
+            edytujK = new edycjaksiazki();
             edytujK.FormClosing += new FormClosingEventHandler(this.Form4_FormClosing);
             this.Hide();
             edytujK.ShowDialog();
@@ -96,7 +96,7 @@ namespace projekt
 
         private void button5_Click(object sender, EventArgs e)
         {
-            edytujA = new Form11();
+            edytujA = new edycjaautora();
             edytujA.FormClosing += new FormClosingEventHandler(this.Form4_FormClosing);
             this.Hide();
             edytujA.ShowDialog();
@@ -104,7 +104,7 @@ namespace projekt
 
         private void button8_Click(object sender, EventArgs e)
         {
-            edytujW = new Form12();
+            edytujW = new edycjawydawnictwa();
             edytujW.FormClosing += new FormClosingEventHandler(this.Form4_FormClosing);
             this.Hide();
             edytujW.ShowDialog();
@@ -112,7 +112,7 @@ namespace projekt
 
         private void button11_Click(object sender, EventArgs e)
         {
-            edytujKa = new Form13();
+            edytujKa = new edycjakategorii();
             edytujKa.FormClosing += new FormClosingEventHandler(this.Form4_FormClosing);
             this.Hide();
             edytujKa.ShowDialog();
@@ -120,7 +120,7 @@ namespace projekt
 
         private void button2_Click(object sender, EventArgs e)
         {
-            usunK = new Form14();
+            usunK = new usuwanieksiazki();
             usunK.FormClosing += new FormClosingEventHandler(this.Form4_FormClosing);
             this.Hide();
             usunK.ShowDialog();
@@ -128,7 +128,7 @@ namespace projekt
 
         private void button4_Click(object sender, EventArgs e)
         {
-            usunA = new Form15();
+            usunA = new usuwanieautora();
             usunA.FormClosing += new FormClosingEventHandler(this.Form4_FormClosing);
             this.Hide();
             usunA.ShowDialog();
@@ -136,7 +136,7 @@ namespace projekt
 
         private void button7_Click(object sender, EventArgs e)
         {
-            usunW = new Form16();
+            usunW = new usuwaniewydawnictwa();
             usunW.FormClosing += new FormClosingEventHandler(this.Form4_FormClosing);
             this.Hide();
             usunW.ShowDialog();
@@ -144,7 +144,7 @@ namespace projekt
 
         private void button10_Click(object sender, EventArgs e)
         {
-            usunKa = new Form17();
+            usunKa = new usuwaniekategorii();
             usunKa.FormClosing += new FormClosingEventHandler(this.Form4_FormClosing);
             this.Hide();
             usunKa.ShowDialog();

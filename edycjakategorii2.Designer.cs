@@ -1,7 +1,7 @@
 ﻿
 namespace projekt
 {
-    partial class dodajksiazke
+    partial class edycjakategorii2
     {
         /// <summary>
         /// Required designer variable.
@@ -31,18 +31,20 @@ namespace projekt
         {
             this.SuspendLayout();
             // 
-            // dodajksiazke
+            // edycjakategorii2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "dodajksiazke";
-            this.Text = "Dodaj książkę";
+            this.Name = "edycjakategorii2";
+            this.Text = "Form21";
+            this.Load += new System.EventHandler(this.formularzkategoria_Load);
             this.ResumeLayout(false);
 
         }
+
         #endregion
     }
 }

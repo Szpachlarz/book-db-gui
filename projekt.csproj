@@ -85,71 +85,95 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
+    <Compile Include="formularzautor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularzautor.Designer.cs">
+      <DependentUpon>formularzautor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularzkategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularzkategoria.Designer.cs">
+      <DependentUpon>formularzkategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularzksiazka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularzksiazka.Designer.cs">
+      <DependentUpon>formularzksiazka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularzwydawnictwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularzwydawnictwo.Designer.cs">
+      <DependentUpon>formularzwydawnictwo.cs</DependentUpon>
+    </Compile>
     <Compile Include="logowanie.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="logowanie.Designer.cs">
       <DependentUpon>logowanie.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form10.cs">
+    <Compile Include="edycjaksiazki.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form10.Designer.cs">
-      <DependentUpon>Form10.cs</DependentUpon>
+    <Compile Include="edycjaksiazki.Designer.cs">
+      <DependentUpon>edycjaksiazki.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form11.cs">
+    <Compile Include="edycjaautora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form11.Designer.cs">
-      <DependentUpon>Form11.cs</DependentUpon>
+    <Compile Include="edycjaautora.Designer.cs">
+      <DependentUpon>edycjaautora.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form12.cs">
+    <Compile Include="edycjawydawnictwa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form12.Designer.cs">
-      <DependentUpon>Form12.cs</DependentUpon>
+    <Compile Include="edycjawydawnictwa.Designer.cs">
+      <DependentUpon>edycjawydawnictwa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form13.cs">
+    <Compile Include="edycjakategorii.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form13.Designer.cs">
-      <DependentUpon>Form13.cs</DependentUpon>
+    <Compile Include="edycjakategorii.Designer.cs">
+      <DependentUpon>edycjakategorii.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form14.cs">
+    <Compile Include="usuwanieksiazki.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form14.Designer.cs">
-      <DependentUpon>Form14.cs</DependentUpon>
+    <Compile Include="usuwanieksiazki.Designer.cs">
+      <DependentUpon>usuwanieksiazki.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form15.cs">
+    <Compile Include="usuwanieautora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form15.Designer.cs">
-      <DependentUpon>Form15.cs</DependentUpon>
+    <Compile Include="usuwanieautora.Designer.cs">
+      <DependentUpon>usuwanieautora.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form16.cs">
+    <Compile Include="usuwaniewydawnictwa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form16.Designer.cs">
-      <DependentUpon>Form16.cs</DependentUpon>
+    <Compile Include="usuwaniewydawnictwa.Designer.cs">
+      <DependentUpon>usuwaniewydawnictwa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form17.cs">
+    <Compile Include="usuwaniekategorii.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form17.Designer.cs">
-      <DependentUpon>Form17.cs</DependentUpon>
+    <Compile Include="usuwaniekategorii.Designer.cs">
+      <DependentUpon>usuwaniekategorii.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form18.cs">
+    <Compile Include="edycjaksiazki2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form18.Designer.cs">
-      <DependentUpon>Form18.cs</DependentUpon>
+    <Compile Include="edycjaksiazki2.Designer.cs">
+      <DependentUpon>edycjaksiazki2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form19.cs">
+    <Compile Include="edycjaautora2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form19.Designer.cs">
-      <DependentUpon>Form19.cs</DependentUpon>
+    <Compile Include="edycjaautora2.Designer.cs">
+      <DependentUpon>edycjaautora2.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -157,41 +181,41 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form20.cs">
+    <Compile Include="edycjawydawnictwa2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form20.Designer.cs">
-      <DependentUpon>Form20.cs</DependentUpon>
+    <Compile Include="edycjawydawnictwa2.Designer.cs">
+      <DependentUpon>edycjawydawnictwa2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form21.cs">
+    <Compile Include="edycjakategorii2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form21.Designer.cs">
-      <DependentUpon>Form21.cs</DependentUpon>
+    <Compile Include="edycjakategorii2.Designer.cs">
+      <DependentUpon>edycjakategorii2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form22.cs">
+    <Compile Include="usuwanieksiazki2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form22.Designer.cs">
-      <DependentUpon>Form22.cs</DependentUpon>
+    <Compile Include="usuwanieksiazki2.Designer.cs">
+      <DependentUpon>usuwanieksiazki2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form23.cs">
+    <Compile Include="usuwanieautora2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form23.Designer.cs">
-      <DependentUpon>Form23.cs</DependentUpon>
+    <Compile Include="usuwanieautora2.Designer.cs">
+      <DependentUpon>usuwanieautora2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form24.cs">
+    <Compile Include="usuwaniewydawnictwa2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form24.Designer.cs">
-      <DependentUpon>Form24.cs</DependentUpon>
+    <Compile Include="usuwaniewydawnictwa2.Designer.cs">
+      <DependentUpon>usuwaniewydawnictwa2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form25.cs">
+    <Compile Include="usuwaniekategorii2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form25.Designer.cs">
-      <DependentUpon>Form25.cs</DependentUpon>
+    <Compile Include="usuwaniekategorii2.Designer.cs">
+      <DependentUpon>usuwaniekategorii2.cs</DependentUpon>
     </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
@@ -237,59 +261,77 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="usuwanieedycja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usuwanieedycja.Designer.cs">
+      <DependentUpon>usuwanieedycja.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="formularzautor.resx">
+      <DependentUpon>formularzautor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularzkategoria.resx">
+      <DependentUpon>formularzkategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularzksiazka.resx">
+      <DependentUpon>formularzksiazka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularzwydawnictwo.resx">
+      <DependentUpon>formularzwydawnictwo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="logowanie.resx">
       <DependentUpon>logowanie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form10.resx">
-      <DependentUpon>Form10.cs</DependentUpon>
+    <EmbeddedResource Include="edycjaksiazki.resx">
+      <DependentUpon>edycjaksiazki.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form11.resx">
-      <DependentUpon>Form11.cs</DependentUpon>
+    <EmbeddedResource Include="edycjaautora.resx">
+      <DependentUpon>edycjaautora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form12.resx">
-      <DependentUpon>Form12.cs</DependentUpon>
+    <EmbeddedResource Include="edycjawydawnictwa.resx">
+      <DependentUpon>edycjawydawnictwa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form13.resx">
-      <DependentUpon>Form13.cs</DependentUpon>
+    <EmbeddedResource Include="edycjakategorii.resx">
+      <DependentUpon>edycjakategorii.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form14.resx">
-      <DependentUpon>Form14.cs</DependentUpon>
+    <EmbeddedResource Include="usuwanieksiazki.resx">
+      <DependentUpon>usuwanieksiazki.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form15.resx">
-      <DependentUpon>Form15.cs</DependentUpon>
+    <EmbeddedResource Include="usuwanieautora.resx">
+      <DependentUpon>usuwanieautora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form16.resx">
-      <DependentUpon>Form16.cs</DependentUpon>
+    <EmbeddedResource Include="usuwaniewydawnictwa.resx">
+      <DependentUpon>usuwaniewydawnictwa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form17.resx">
-      <DependentUpon>Form17.cs</DependentUpon>
+    <EmbeddedResource Include="usuwaniekategorii.resx">
+      <DependentUpon>usuwaniekategorii.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form18.resx">
-      <DependentUpon>Form18.cs</DependentUpon>
+    <EmbeddedResource Include="edycjaksiazki2.resx">
+      <DependentUpon>edycjaksiazki2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form19.resx">
-      <DependentUpon>Form19.cs</DependentUpon>
+    <EmbeddedResource Include="edycjaautora2.resx">
+      <DependentUpon>edycjaautora2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form20.resx">
-      <DependentUpon>Form20.cs</DependentUpon>
+    <EmbeddedResource Include="edycjawydawnictwa2.resx">
+      <DependentUpon>edycjawydawnictwa2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form21.resx">
-      <DependentUpon>Form21.cs</DependentUpon>
+    <EmbeddedResource Include="edycjakategorii2.resx">
+      <DependentUpon>edycjakategorii2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form22.resx">
-      <DependentUpon>Form22.cs</DependentUpon>
+    <EmbeddedResource Include="usuwanieksiazki2.resx">
+      <DependentUpon>usuwanieksiazki2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form23.resx">
-      <DependentUpon>Form23.cs</DependentUpon>
+    <EmbeddedResource Include="usuwanieautora2.resx">
+      <DependentUpon>usuwanieautora2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form24.resx">
-      <DependentUpon>Form24.cs</DependentUpon>
+    <EmbeddedResource Include="usuwaniewydawnictwa2.resx">
+      <DependentUpon>usuwaniewydawnictwa2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form25.resx">
-      <DependentUpon>Form25.cs</DependentUpon>
+    <EmbeddedResource Include="usuwaniekategorii2.resx">
+      <DependentUpon>usuwaniekategorii2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
@@ -322,6 +364,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="usuwanieedycja.resx">
+      <DependentUpon>usuwanieedycja.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

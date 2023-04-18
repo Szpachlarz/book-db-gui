@@ -1,31 +1,29 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using MySql.Data.MySqlClient;
-using System.Text.RegularExpressions;
 
 namespace projekt
 {
-    public partial class dodajkategorie : formularzkategoria
+    public partial class formularzkategoria : Form
     {
-        public override string query
+        public virtual string query
         {
-            get { return "INSERT INTO kategorie(nazwa) VALUES(@nazwa)"; }
+            get { return ""; }
         }
         paneladmina powrot;
-        public dodajkategorie()
+        public formularzkategoria()
         {
             InitializeComponent();
         }
-
-        private void Form9_FormClosing(object sender, FormClosingEventArgs e)
+        public virtual void Form9_FormClosing(object sender, FormClosingEventArgs e)
         {
             paneladmina wyjdz = new paneladmina();
             wyjdz.Show();
@@ -37,15 +35,14 @@ namespace projekt
             this.Hide();
             powrot.ShowDialog();
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        public virtual void button2_Click(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 var database = new Database();
                 if (database.connect_db())
                 {
-                    string insertKategoria = String.Format(query);
+                    string insertKategoria = String.Format("INSERT INTO kategorie(nazwa) VALUES(@nazwa)");
 
                     MySqlCommand mySqlCommand2 = new MySqlCommand(insertKategoria);
                     mySqlCommand2.Parameters.AddWithValue("@nazwa", textKategoria.Text);
@@ -66,11 +63,11 @@ namespace projekt
                 }
             }
         }
-        private void textKategoria_Validating(object sender, CancelEventArgs e)
+        public virtual void textKategoria_Validating(object sender, CancelEventArgs e)
         {
             Regex stringCheck = new Regex(@"^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ .\-]+$");
             Match matchKategoria = stringCheck.Match(textKategoria.Text);
-            if (string.IsNullOrWhiteSpace(textKategoria.Text) || textKategoria.Text.Length > 30 || !matchKategoria.Success )
+            if (string.IsNullOrWhiteSpace(textKategoria.Text) || textKategoria.Text.Length > 30 || !matchKategoria.Success)
             {
                 e.Cancel = true;
                 textKategoria.Focus();
@@ -103,7 +100,7 @@ namespace projekt
                 MessageBox.Show("Błąd połączenia z bazą!");
             }
         }
-        private void ClearTextBoxes()
+        public void ClearTextBoxes()
         {
             Action<Control.ControlCollection> func = null;
 
@@ -117,6 +114,11 @@ namespace projekt
             };
 
             func(Controls);
+        }
+
+        public virtual void formularzkategoria_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
