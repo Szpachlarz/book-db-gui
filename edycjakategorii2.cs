@@ -16,6 +16,10 @@ namespace projekt
     public partial class edycjakategorii2 : formularzkategoria
     {
         internal string idkategorii2;
+        public edycjakategorii2()
+        {
+            button2.Text = "Edytuj";
+        }
         public override void button2_Click(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))

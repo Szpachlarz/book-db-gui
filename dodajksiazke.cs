@@ -24,6 +24,9 @@ namespace projekt
         {
             get { return "INSERT INTO autorstwo(autor, id_ksiazki) VALUES(@autor, @id_ksiazki)"; }
         }
-
+        public dodajksiazke()
+        {
+            Text = "Dodawanie książki";
+        }
     }
 }

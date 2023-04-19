@@ -15,6 +15,12 @@ namespace projekt
 {
     public partial class edycjaksiazki2 : formularzksiazka
     {
+        public edycjaksiazki2()
+        {
+            button2.Text = "Edytuj";
+            Text = "Edycja książki";
+        }
+
         internal string idksiazki2;
         int n = 0;
         int m = 0;
@@ -201,7 +207,6 @@ namespace projekt
                 }
             }
         }
-
         public override void textISBN_Validating(object sender, CancelEventArgs e)
         {
             Regex intCheck = new Regex(@"^\d+$");

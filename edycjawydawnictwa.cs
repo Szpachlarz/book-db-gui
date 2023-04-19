@@ -19,6 +19,10 @@ namespace projekt
         {
             get { return "SELECT id, nazwa FROM wydawnictwa"; }
         }
+        public edycjawydawnictwa()
+        {
+            Text = "Wybierz wydawnictwo";
+        }
         public override void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)

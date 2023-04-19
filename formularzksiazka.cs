@@ -155,8 +155,7 @@ namespace projekt
         }
         public void Form6_FormClosing(object sender, FormClosingEventArgs e)
         {
-            paneladmina wyjdz = new paneladmina();
-            wyjdz.Show();
+
         }
         public void button1_Click(object sender, EventArgs e)
         {

@@ -22,7 +22,11 @@ namespace projekt
         {
             get { return "UPDATE autorzy SET imiona=@imiona, nazwisko=@nazwisko, data_urodzenia=@data_urodzenia, data_smierci=@data_smierci, narodowosc=@narodowosc WHERE id={0}", idautora2; }
         }*/
-
+        public edycjaautora2()
+        {
+            button2.Text = "Edytuj";
+            Text = "Edycja autora";
+        }
         public override void Form7_Load(object sender, EventArgs e)
         {
             string query2 = String.Format("SELECT imiona, nazwisko, data_urodzenia, data_smierci, narodowosc FROM autorzy WHERE id={0}"
@@ -53,7 +57,6 @@ namespace projekt
                 MessageBox.Show("Database error!");
             }
         }
-
         public override void button2_Click(object sender, EventArgs e)
         {
             var database = new Database();
@@ -87,7 +90,7 @@ namespace projekt
             }
             else
             {
-                MessageBox.Show("Database error!");
+                MessageBox.Show("Błąd bazy!");
             }
         }
     }

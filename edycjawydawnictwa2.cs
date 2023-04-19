@@ -17,12 +17,16 @@ namespace projekt
     {
         edycjawydawnictwa powrot;
         internal string idwydawnictwa2;
+        public edycjawydawnictwa2()
+        {
+            button2.Text = "Edytuj";
+            Text = "Edycja wydawnictwa";
+        }
         public override void button2_Click(object sender, EventArgs e)
         {
             var database = new Database();
             if (database.connect_db())
-            {
-                
+            {                
                 string query = String.Format("UPDATE wydawnictwa SET nazwa=@nazwa, adres=@adres, miasto=@miasto, kraj=@kraj WHERE id={0}"
                     , idwydawnictwa2);
 
@@ -43,7 +47,7 @@ namespace projekt
             }
             else
             {
-                MessageBox.Show("Database error!");
+                MessageBox.Show("Błąd bazy!");
             }
         }
         public override void formularzwydawnictwo_Load(object sender, EventArgs e)
@@ -72,7 +76,7 @@ namespace projekt
             }
             else
             {
-                MessageBox.Show("Database error!");
+                MessageBox.Show("Błąd bazy!");
             }
         }
 

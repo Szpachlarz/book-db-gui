@@ -12,12 +12,15 @@ using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
 
 namespace projekt
-{
-    public partial class usuwanieksiazki2 : formularzksiazka
+{    public partial class usuwanieksiazki2 : formularzksiazka
     {
         internal string idksiazki2;
         int n = 0;
-
+        public usuwanieksiazki2()
+        {
+            button2.Text = "Usuń";
+            Text = "Usuwanie książki";
+        }
         public override void Form6_Load(object sender, EventArgs e)
         {
             comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -50,7 +53,7 @@ namespace projekt
 
             string query1 = String.Format("SELECT k.tytul, k.seria, k.rok_wydania, k.rok_1wydania, k.strony, k.jezyk, k.jezyk_oryginalny, k.tlumaczenie, k.tytul_oryginalny, k.ISBN, w.nazwa AS wydawnictwo, ka.nazwa AS kategoria FROM ksiazki AS k INNER JOIN wydawnictwa AS w ON k.wydawnictwo=w.id INNER JOIN kategorie AS ka ON ka.id = k.kategoria WHERE id_ksiazki={0}"
                 , idksiazki2);
-            string query2 = String.Format("SELECT id_ksiazki, autor, au.imiona, au.nazwisko, au.id AS caludia, SUM((SELECT COUNT(*) FROM autorstwo WHERE id_ksiazki={0})) AS claudia FROM autorstwo as a RIGHT JOIN autorzy AS au ON au.id=a.autor WHERE id_ksiazki={0} GROUP BY caludia"
+            string query2 = String.Format("SELECT id_ksiazki, autor, au.imiona, au.nazwisko, au.id AS idautora, SUM((SELECT COUNT(*) FROM autorstwo WHERE id_ksiazki={0})) AS suma FROM autorstwo as a RIGHT JOIN autorzy AS au ON au.id=a.autor WHERE id_ksiazki={0} GROUP BY idautora"
                 , idksiazki2);
             string query3 = String.Format("SELECT imiona, nazwisko, id FROM autorzy"
                 , idksiazki2);
@@ -120,7 +123,7 @@ namespace projekt
                 bindingSource3.DataSource = dt3;
 
                 List<ComboBox> comboBoxList = new List<ComboBox>();
-                for (int i = 4; i < Convert.ToInt32(dt2.Rows[0]["claudia"]) + 4; i++)
+                for (int i = 4; i < Convert.ToInt32(dt2.Rows[0]["suma"]) + 4; i++)
                 {
                     var dataSource36 = new List<Authors>();
                     foreach (var item in dt3.AsEnumerable())

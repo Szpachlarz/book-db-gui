@@ -19,6 +19,10 @@ namespace projekt
         {
             get { return "SELECT id_ksiazki, tytul FROM ksiazki"; }
         }
+        public usuwanieksiazki()
+        {
+            Text = "Wybierz książkę";
+        }
         public override void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)

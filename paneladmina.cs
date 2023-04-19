@@ -26,21 +26,19 @@ namespace projekt
         usuwanieautora usunA;
         usuwaniewydawnictwa usunW;
         usuwaniekategorii usunKa;
-        //panel administratora
+
         
         public paneladmina()
         {
             InitializeComponent();
+            Text = "Panel administratora";
         }
 
         private void Form4_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //powrót do panelu logowania po zamknięciu
-            logowanie logForm = new logowanie();
-            logForm.Show();
+
         }
 
-        //wypełnienie tabeli danymi z bazy danych przy załadowaniu formularza
         private void Form4_Load(object sender, EventArgs e)
         {
 

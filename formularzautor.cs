@@ -24,7 +24,6 @@ namespace projekt
         {
             InitializeComponent();
         }
-
         public virtual void button2_Click(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
@@ -72,8 +71,7 @@ namespace projekt
 
         public void Form7_FormClosing(object sender, FormClosingEventArgs e)
         {
-            paneladmina wyjdz = new paneladmina();
-            wyjdz.Show();
+
         }
 
         public void button1_Click(object sender, EventArgs e)

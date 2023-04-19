@@ -26,8 +26,7 @@ namespace projekt
 
         public void Form8_FormClosing(object sender, FormClosingEventArgs e)
         {
-            paneladmina wyjdz = new paneladmina();
-            wyjdz.Show();
+
         }
         public void button1_Click(object sender, EventArgs e)
         {
@@ -36,7 +35,6 @@ namespace projekt
             this.Hide();
             powrot.ShowDialog();
         }
-
         public virtual void button2_Click(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))

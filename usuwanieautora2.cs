@@ -16,6 +16,11 @@ namespace projekt
     public partial class usuwanieautora2 : formularzautor
     {
         internal string idautora2;
+        public usuwanieautora2()
+        {
+            button2.Text = "Usuń";
+            Text = "Usuwanie autora";
+        }
         public override void Form7_Load(object sender, EventArgs e)
         {
             string query = String.Format("SELECT imiona, nazwisko, data_urodzenia, data_smierci, narodowosc FROM autorzy WHERE id={0}"

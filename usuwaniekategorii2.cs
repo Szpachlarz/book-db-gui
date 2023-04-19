@@ -16,6 +16,11 @@ namespace projekt
     public partial class usuwaniekategorii2 : formularzkategoria
     {
         internal string idkategorii2;
+        public usuwaniekategorii2()
+        {
+            button2.Text = "Usuń";
+            Text = "Usuwanie kategorii";
+        }
         public override void formularzkategoria_Load(object sender, EventArgs e)
         {
             string query = String.Format("SELECT nazwa FROM kategorie WHERE id={0}"

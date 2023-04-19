@@ -26,8 +26,7 @@ namespace projekt
 
         public void usuwanieedycja_FormClosing(object sender, FormClosingEventArgs e)
         {
-            paneladmina wyjdz = new paneladmina();
-            wyjdz.Show();
+
         }
 
         public void button1_Click(object sender, EventArgs e)
@@ -46,7 +45,6 @@ namespace projekt
             var database = new Database();
             if (database.connect_db())
             {
-                //string query = "SELECT tytul, id_ksiazki FROM ksiazki";
                 MySqlCommand mySqlCommand = new MySqlCommand(query);
                 mySqlCommand.Connection = database.mySqlConnection;
                 MySqlDataAdapter adapter = new MySqlDataAdapter();

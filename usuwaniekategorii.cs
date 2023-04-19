@@ -19,7 +19,10 @@ namespace projekt
         {
             get { return "SELECT id, nazwa FROM kategorie"; }
         }
-
+        public usuwaniekategorii()
+        {
+            Text = "Wybierz kategorię";
+        }
         public override void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)

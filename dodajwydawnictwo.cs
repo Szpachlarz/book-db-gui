@@ -20,6 +20,9 @@ namespace projekt
         {
             get { return "INSERT INTO wydawnictwa(nazwa, adres, miasto, kraj) VALUES(@nazwa, @adres, @miasto, @kraj)"; }
         }
-        
+        public dodajwydawnictwo()
+        {
+            Text = "Dodawanie wydawnictwa";
+        }
     }
 }

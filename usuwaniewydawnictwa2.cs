@@ -12,10 +12,14 @@ using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
 
 namespace projekt
-{
-    public partial class usuwaniewydawnictwa2 : formularzwydawnictwo
+{    public partial class usuwaniewydawnictwa2 : formularzwydawnictwo
     {
-        internal string idwydawnictwa;        
+        internal string idwydawnictwa;
+        public usuwaniewydawnictwa2()
+        {
+            button2.Text = "Usuń";
+            Text = "Usuwanie wydawnictwa";
+        }
         public override void formularzwydawnictwo_Load(object sender, EventArgs e)
         {
             string query = String.Format("SELECT nazwa, adres, miasto, kraj FROM wydawnictwa WHERE id={0}"

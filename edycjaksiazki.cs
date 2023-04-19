@@ -17,13 +17,17 @@ namespace projekt
     {
         public override string query
         {
-            get { return "SELECT tytul, id_ksiazki FROM ksiazki"; }
+            get { return "SELECT id_ksiazki, tytul FROM ksiazki"; }
+        }
+        public edycjaksiazki()
+        {
+            Text = "Wybierz książkę";
         }
         public override void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                string idksiazki = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string idksiazki = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 
                 edycjaksiazki2 form18 = new edycjaksiazki2();
                 form18.idksiazki2 = idksiazki;
