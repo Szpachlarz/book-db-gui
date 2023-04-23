@@ -54,7 +54,7 @@ namespace projekt
                 CreateComboBoxes(n);
             }
 
-            string query1 = String.Format("SELECT k.tytul, k.seria, k.rok_wydania, k.rok_1wydania, k.strony, k.jezyk, k.jezyk_oryginalny, k.tlumaczenie, k.tytul_oryginalny, k.ISBN, w.nazwa AS wydawnictwo, ka.nazwa AS kategoria FROM ksiazki AS k INNER JOIN wydawnictwa AS w ON k.wydawnictwo=w.id INNER JOIN kategorie AS ka ON ka.id = k.kategoria WHERE id_ksiazki={0}"
+            string query1 = String.Format("SELECT tytul, seria, rok_wydania, rok_1wydania, strony, jezyk, jezyk_oryginalny, tlumaczenie, tytul_oryginalny, ISBN, w.nazwa AS wydawnictwo, ka.nazwa AS kategoria FROM ksiazki AS k INNER JOIN wydawnictwa AS w ON k.wydawnictwo=w.id INNER JOIN kategorie AS ka ON ka.id = k.kategoria WHERE id_ksiazki={0}"
                 , idksiazki2);
             string query2 = String.Format("SELECT id_ksiazki, autor, au.imiona, au.nazwisko, au.id AS idautora, SUM((SELECT COUNT(*) FROM autorstwo WHERE id_ksiazki={0})) AS suma FROM autorstwo as a RIGHT JOIN autorzy AS au ON au.id=a.autor WHERE id_ksiazki={0} GROUP BY idautora"
                 , idksiazki2);
@@ -121,9 +121,9 @@ namespace projekt
                     }
                     ComboBox comboBox = new ComboBox();
                     comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-                    comboBox.Location = new System.Drawing.Point(5, 10 + ((i - 4) * 25));
+                    comboBox.Location = new Point(5, 10 + ((i - 4) * 25));
                     comboBox.Name = "comboBox" + i;
-                    comboBox.Size = new System.Drawing.Size(121, 21);
+                    comboBox.Size = new Size(121, 21);
                     comboBoxList.Add(comboBox);
                     comboBoxList[i - 4].DataSource = dataSource36;
                     comboBoxList[i - 4].DisplayMember = "Name";
@@ -139,10 +139,11 @@ namespace projekt
                 }
 
                 database.close_db();
+                MessageBox.Show("Zapisano!");
             }
             else
             {
-                MessageBox.Show("Database error!");
+                MessageBox.Show("Błąd bazy!");
             }
         }
         public override void button2_Click(object sender, EventArgs e)
